@@ -54,7 +54,7 @@
                 </label>
 
                 <label>
-                    Gambar slider (Ukuran 1200 x 570 px)
+                    Gambar slider (Ukuran 940 x 788px (pada tampilan dekstop agak sedikit terpotong,disarankan aset agak ketengah))
                     <input type="file" name="image" accept="image/*" required>
                 </label>
 

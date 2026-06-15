@@ -165,14 +165,6 @@
       </article>
     @empty
       @for ($i = 0; $i < 4; $i++)
-        <article class="artikel-card">
-          <img src="{{ asset('image/banner-wakaf.jpg') }}" alt="Artikel Wakaf">
-          <div class="artikel-card-body">
-            <h3>Manfaat Wakaf untuk Kesejahteraan Umat</h3>
-            <p>Ringkasan singkat artikel akan tampil di bagian ini.</p>
-            <a href="{{ route('artikel') }}" class="artikel-card-button">Baca Artikel</a>
-          </div>
-        </article>
       @endfor
     @endforelse
   </div>
