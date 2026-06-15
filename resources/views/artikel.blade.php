@@ -71,23 +71,6 @@
                     </div>
                 </article>
             @empty
-                <article
-                    class="artikel-list-card"
-                    data-article-card
-                    data-title="wakaf qurban pelosok negeri"
-                    data-excerpt="lorem ipsum dolor sit amet"
-                    data-date="0"
-                >
-                    <img src="{{ asset('image/IMG_9791.JPG.jpg') }}" alt="Wakaf Qurban Pelosok Negeri">
-
-                    <div class="artikel-card-content">
-                        <h2>Wakaf Qurban Pelosok Negeri</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                        <button type="button" class="artikel-card-link">Lihat Selengkapnya</button>
-                    </div>
-                </article>
             @endforelse
         </section>
 
