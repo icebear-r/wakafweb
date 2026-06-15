@@ -132,13 +132,7 @@
       </article>
     @empty
       @for ($i = 0; $i < 3; $i++)
-        <article class="program-card">
-          <img src="{{ asset('image/banner-wakaf.jpg') }}" alt="Wakaf Qurban Pelosok Negeri">
-          <div class="program-card-body">
-            <h3>Wakaf Qurban<br>Pelosok Negeri</h3>
-            <a href="#" class="program-card-button">Wakaf Sekarang</a>
-          </div>
-        </article>
+      
       @endfor
     @endforelse
   </div>
