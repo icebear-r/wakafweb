@@ -1,0 +1,87 @@
+@import 'tailwindcss';
+@import './Home.css';
+@import './TentangKami.css';
+@import './Program.css';
+@import './Artikel.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.wakaf-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.wakaf-loader.is-active {
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+}
+
+.wakaf-loader img {
+    width: 146px;
+    height: auto;
+    animation: wakaf-logo-bounce 0.8s ease-in-out infinite;
+}
+
+.wakaf-loader::after {
+    content: "";
+    position: absolute;
+    top: calc(50% + 58px);
+    left: 50%;
+    width: 56px;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.18);
+    filter: blur(3px);
+    transform: translateX(-50%);
+    animation: wakaf-loader-shadow 0.8s ease-in-out infinite;
+}
+
+@keyframes wakaf-logo-bounce {
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-22px) scale(1.04);
+    }
+}
+
+@keyframes wakaf-loader-shadow {
+    0%,
+    100% {
+        opacity: 0.22;
+        transform: translateX(-50%) scaleX(1);
+    }
+
+    50% {
+        opacity: 0.1;
+        transform: translateX(-50%) scaleX(0.65);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wakaf-loader,
+    .wakaf-loader img,
+    .wakaf-loader::after {
+        animation: none;
+        transition: none;
+    }
+}
